@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main', url: 'https://github.com/AlishbaNawab/AN_12.git', credentialsId: 'AN_12'
-                echo 'Checkout completed!'
+                echo 'Checkout complete'
             }
         }
 
@@ -39,9 +39,11 @@ pipeline {
             }
         }
     }
+
     post {
         always {
             echo 'Pipeline run finished'
         }
     }
 }
+
